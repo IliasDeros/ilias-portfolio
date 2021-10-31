@@ -99,7 +99,11 @@
 			$window.on('load', function() {
 
 				$('#two').poptrox({
-					caption: function($a) { return $a.next('h3').text(); },
+					caption: function($a) { 
+						var h3 = $a.next('h3')
+						var p = h3.next('p')
+						return h3.text() + ': ' + p.text(); 
+					},
 					overlayColor: '#2c2c2c',
 					overlayOpacity: 0.85,
 					popupCloserText: '',
