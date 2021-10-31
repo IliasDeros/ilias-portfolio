@@ -1,0 +1,348 @@
+/**
+* HTML5Up "solid state" style override (http://html5up.net/solid-state)
+*
+* Contents:
+*
+* Text
+* Buttons
+* Wrappers
+* Contact
+* Fullstack
+* Me
+*/
+
+
+
+
+
+/*******************************************************************************
+* ~Text
+*******************************************************************************/
+.id {
+  color: white;
+  font-weight: 900;
+  font-style: normal;  /* override browser italic for em */
+}
+
+.header--call-to-action {
+  text-align: center;
+}
+
+
+
+
+
+/*******************************************************************************
+* ~Buttons
+*******************************************************************************/
+.hire-me__container {
+  text-align: center;
+  padding: 40px;
+  width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  .button {
+    padding: 0 40px;
+  }
+}
+
+
+
+
+
+
+/*******************************************************************************
+* ~Wrappers
+*******************************************************************************/
+@media all and (min-width: 980px){
+  #three.wrapper:after, #four.wrapper:after {
+      height: 6.6em;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  #wrapper > header {
+    background-size: auto, cover;
+  }
+}
+
+
+
+
+/*******************************************************************************
+* ~Contact
+*******************************************************************************/
+#contact__form {
+  position: relative;
+}
+
+.actions .contact--result {
+  display: none;
+  font-family: Raleway, Helvetica, sans-serif;
+  font-size: 0.8em;
+  font-weight: 700;
+  height: 3.75em;
+  letter-spacing: 0.1em;
+  line-height: 3.75em;
+  padding: 0 2.25em;
+  text-transform: uppercase;
+}
+
+.contact--result__text {
+  display: none;
+  position: absolute;
+  right: 1.5em;
+  bottom: 2.75em;
+}
+
+.result--success {
+  color: #84ED84;
+}
+
+.result--error {
+  color: #F35D5D;
+}
+
+.required:after {
+  content: '*';
+  color: red;
+}
+
+input[disabled] {
+  cursor: default;
+}
+
+textarea {
+  resize: vertical;
+}
+
+@media all and (min-width: 980px){
+  #footer > .inner > #contact__form {
+    margin-top: 1.5em;
+    margin-right: 1.5em;
+    width: 50%; /* inherited from main.css */
+  }
+
+  #footer > .inner > #contact__form > form {
+    width: calc(100% - 1.5em);
+  }
+
+  textarea {
+    width: calc(200% + 3em);
+  }
+
+  .contact--result__text {
+    right: -100%;
+  }
+
+  ul.contact {
+    position: relative;
+    margin-top: 2.5em;
+    height: 60%;  /* prevent overlapping message field */
+  }
+
+  ul.contact > li:first-child + li {
+    margin-top: 0;
+  }
+
+  ul.contact > li:nth-child(2n - 1) {
+    float: right;
+    position: absolute;
+    left: 56%;
+  }
+
+  ul.contact > li {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 980px){
+  .contact--result__text {
+    bottom: 1em;
+  }
+}
+
+@media all and (max-width: 640px){
+  .contact--result__text {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+  }
+
+  .contact--result__text > .loader {
+    left: calc(50% - 0.5em);
+  }
+}
+
+#link-hire:target + #contact__form > #js-contact .field input,
+#link-hire:target + #contact__form > #js-contact .field textarea {
+  border-color: #F08C31;
+}
+
+
+
+
+
+/*******************************************************************************
+* ~Fullstack
+*******************************************************************************/
+.stack {
+  opacity: 0.2;
+  width: 174px;
+  position: absolute;
+}
+
+.stack:hover {
+  opacity: 1;
+}
+
+.stack--front-end {
+  top: 0;
+  z-index: 3;
+}
+
+.stack--communication {
+  top: 74px;
+  z-index: 2;
+}
+
+.stack--back-end {
+  top: 148px;
+  z-index: 1;
+}
+
+/* definitions */
+.definition__container > .definition {
+  display: none;
+}
+
+.definition.definition--default {
+  display: block;
+  opacity: 0.4;
+}
+
+.stack:hover ~ .definition__container > .definition--default {
+  display: none;
+}
+
+.stack--front-end:hover ~ .definition__container > .definition--front-end,
+.stack--communication:hover ~ .definition__container > .definition--communication,
+.stack--back-end:hover ~ .definition__container > .definition--back-end {
+  display: block;
+}
+
+.pointer {
+  position: absolute;
+  display: none;
+}
+
+.definition__para--desktop { display: none; }
+
+@media all and (min-device-width: 981px){
+  .definition__para--desktop { display: initial; }
+  .definition__para--mobile { display: none; }
+}
+
+/* media queries */
+@media all and (min-width: 981px){
+  .stack__container {
+    position: relative;
+    height: 120px;
+  }
+
+  .stack {
+    right: 0;
+    margin-top: -145px;
+  }
+
+  #fullstack-definition {
+    width: calc(100% - 174px - 60px);
+  }
+
+  .definition__container {
+    position: absolute;
+    width: calc(100% - 174px - 40px); /* -stack width -margin */
+    left: 0;
+  }
+
+  .pointer--large {
+    display: inline;
+    font-size: 64px;
+    right: 0;
+    top: 14px;
+  }
+}
+
+@media all and (min-width: 481px) and (max-width: 980px){
+  .stack__container {
+    position: relative;
+    height: 300px;
+    margin: 64px 12px;
+  }
+
+  .definition__container {
+    position: absolute;
+    width: calc(100% - 174px - 40px); /* -stack width -margin */
+    right: 0;
+  }
+
+  .pointer--medium {
+    left: -28px;
+    top: 24px;
+    display: inline;
+  }
+}
+
+@media all and (max-width: 480px){
+  .stack__container {
+    position: relative;
+    margin: 12px;
+    height: 470px;
+  }
+
+  .stack {
+    left: calc(50% - 95px); /* center horizontally */
+  }
+
+  .definition__container {
+    position: relative;
+    width: 100%;
+    top: 320px;
+  }
+
+  .pointer--small {
+    display: block;
+    top: -34px;
+    left: calc(50% - 12px);
+  }
+}
+
+
+
+
+
+/*******************************************************************************
+* ~Me
+*******************************************************************************/
+a.quote:before {
+  content: '"' !important;
+}
+
+p.quote {
+  font-style: italic;
+}
+
+p.quote:before, p.quote:after {
+  content: '"';
+}
+
+p.quote-start:after {
+  content: '';
+}
+
+p.quote-end:before {
+  content: '';
+}

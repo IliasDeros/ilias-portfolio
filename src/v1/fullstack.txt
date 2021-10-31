@@ -1,0 +1,20 @@
+what does 'fullstack' mean ?
+
+A fullstack web developer can handle tasks related to any layer of the website.
+
+Whether it's... 
+- designing a nice layout that will put what's important up front,
+technical: (show design of carlyan's website)
+
+- making sure every component understands eachother ([ ] ----o--------- [])
+technical: (show front-end stack, AngularJS code)
+
+- taking care of the magic happening underneath the beauty.
+technical: (show back-end stack)
+
+Call to action:
+
+Bring your IDeas to life.
+Hire my team...
+
+Contact...
