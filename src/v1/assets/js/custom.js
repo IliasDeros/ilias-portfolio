@@ -1,6 +1,3 @@
-/*
-* custom script that defer from the original template
-*/
 (function(){
   var contactForm = $('#js-contact');
   var contactMessage = document.getElementById('message');
