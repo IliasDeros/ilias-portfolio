@@ -9,3 +9,10 @@ Help 1000 entrepreneurs grow their business online
 yarn
 yarn start
 ```
+
+## Deploying
+
+```
+yarn build
+# Serve dist/ folder
+```
