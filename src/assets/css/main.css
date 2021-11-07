@@ -4,6 +4,38 @@
 :root {
 	--overlay: linear-gradient(to top, rgba(65, 46, 46, 0.8), rgba(65, 46, 46, 0.8));
 	--header-image: url("../../images/griffintown-boosted.jpg");
+	--color-text: #a2a2a2;
+	--color-highlight: #787878;
+	--color-light: #efefef;
+	--color-background: #fff;
+	--input-border: transparent;
+	--input-background: #f7f7f7;
+}
+
+body.dark {
+	--overlay: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgb(22 27 52 / 80%));
+	--header-image: url("../../images/griffintown-boosted.jpg");
+	--color-background: #2e3141;
+	--color-highlight: #fff;
+	--input-border: rgba(255, 255, 255, 0.125);
+	--input-background: rgba(255, 255, 255, 0.025);
+	--disabled-background: rgba(255, 255, 255, 0.125) !important;
+	--disabled-border	: rgba(255, 255, 255, 0.025) !important;
+}
+
+body {
+	background: #fff;
+	background: var(--color-background);
+}
+
+body, .poptrox-popup {
+	background: #fff;
+	background: var(--color-background);
+}
+
+/* Dark mode transition */
+body, input, span, div {
+	transition: background 0.3s ease, color 0.3s ease;
 }
 
 /*
@@ -87,10 +119,6 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
-	body {
-		background: #fff;
-	}
-
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;
@@ -104,6 +132,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #a2a2a2;
+		color: var(--color-text);
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
@@ -128,6 +157,7 @@ input, select, textarea {
 
 	strong, b {
 		color: #787878;
+		color: var(--color-highlight);
 		font-weight: 400;
 	}
 
@@ -141,6 +171,7 @@ input, select, textarea {
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #787878;
+		color: var(--color-highlight);
 		font-weight: 400;
 		line-height: 1em;
 		margin: 0 0 1em 0;
@@ -196,6 +227,7 @@ input, select, textarea {
 	hr {
 		border: 0;
 		border-bottom: solid 2px #efefef;
+		border-bottom: solid 2px var(--color-light);
 		margin: 2em 0;
 	}
 
@@ -205,6 +237,7 @@ input, select, textarea {
 
 	blockquote {
 		border-left: solid 6px #efefef;
+		border-left: solid 6px var(--color-light);
 		font-style: italic;
 		margin: 0 0 2em 0;
 		padding: 0.5em 0 0.5em 1.5em;
@@ -214,6 +247,7 @@ input, select, textarea {
 		background: #f7f7f7;
 		border-radius: 0.35em;
 		border: solid 2px #efefef;
+		border: solid 2px var(--color-light);
 		font-family: "Courier New", monospace;
 		font-size: 0.9em;
 		margin: 0 0.25em;
@@ -1807,6 +1841,7 @@ input, select, textarea {
 
 	label {
 		color: #787878;
+		color: var(--color-highlight);
 		display: block;
 		font-size: 0.9em;
 		font-weight: 400;
@@ -1823,8 +1858,10 @@ input, select, textarea {
 		-ms-appearance: none;
 		appearance: none;
 		background: #f7f7f7;
+		background: var(--input-background);
 		border-radius: 0.35em;
 		border: solid 2px transparent;
+		border: solid 2px var(--input-border);
 		color: inherit;
 		display: block;
 		outline: 0;
@@ -1861,6 +1898,7 @@ input, select, textarea {
 
 		select option {
 			color: #787878;
+			color: var(--color-highlight);
 			background: #fff;
 		}
 
@@ -1901,6 +1939,7 @@ input, select, textarea {
 		input[type="radio"] + label {
 			text-decoration: none;
 			color: #a2a2a2;
+			color: var(--color-text);
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1em;
@@ -1945,6 +1984,9 @@ input, select, textarea {
 		input[type="radio"]:checked + label:before {
 			background: #787878;
 			border-color: #787878;
+			background: var(--color-highlight);
+			border-color: var(--color-highlight);
+			color: var(--color-highlight);
 			color: #fff;
 			content: '\f00c';
 		}
@@ -1987,6 +2029,7 @@ input, select, textarea {
 	.box {
 		border-radius: 0.35em;
 		border: solid 2px #efefef;
+		border: solid 2px var(--color-light);
 		margin-bottom: 2em;
 		padding: 1.5em;
 	}
@@ -2180,6 +2223,7 @@ input, select, textarea {
 
 			ul.alt li {
 				border-top: solid 2px #efefef;
+				border-top: solid 2px var(--color-light);
 				padding: 0.5em 0;
 			}
 
@@ -2380,6 +2424,7 @@ input, select, textarea {
 
 		table tbody tr {
 			border: solid 1px #efefef;
+			border: solid 1px var(--color-light);
 			border-left: 0;
 			border-right: 0;
 		}
@@ -2394,6 +2439,7 @@ input, select, textarea {
 
 		table th {
 			color: #787878;
+			color: var(--color-highlight);
 			font-size: 0.9em;
 			font-weight: 400;
 			padding: 0 0.75em 0.75em 0.75em;
@@ -2402,10 +2448,12 @@ input, select, textarea {
 
 		table thead {
 			border-bottom: solid 2px #efefef;
+			border-bottom: solid 2px var(--color-light);
 		}
 
 		table tfoot {
 			border-top: solid 2px #efefef;
+			border-top: solid 2px var(--color-light);
 		}
 
 		table.alt {
@@ -2414,6 +2462,7 @@ input, select, textarea {
 
 			table.alt tbody tr td {
 				border: solid 2px #efefef;
+				border: solid 2px var(--color-light);
 				border-left-width: 0;
 				border-top-width: 0;
 			}
@@ -2451,7 +2500,9 @@ input, select, textarea {
 		background-color: transparent;
 		border-radius: 0.35em;
 		border: solid 3px #efefef;
+		border: solid 3px var(--color-light);
 		color: #787878 !important;
+		color: var(--color-highlight) !important;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 400;
@@ -2551,7 +2602,9 @@ input, select, textarea {
 		.button.disabled,
 		.button:disabled {
 			background-color: #e7e7e7 !important;
+			background-color: var(--disabled-background) !important;
 			border-color: #e7e7e7 !important;
+			border-color: var(--disabled-border) !important;
 			color: #b2b2b2 !important;
 			cursor: default;
 		}
@@ -2695,6 +2748,7 @@ input, select, textarea {
 
 		#main > section {
 			border-top: solid 2px #efefef;
+			border-top: solid 2px var(--color-light);
 			margin: 4em 0 0 0;
 			padding: 4em 0 0 0;
 		}
@@ -2777,7 +2831,6 @@ input, select, textarea {
 		-ms-box-sizing: content-box;
 		box-sizing: content-box;
 		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-		background: #fff;
 		border-radius: 0.35em;
 		box-shadow: 0 0.1em 0.15em 0 rgba(0, 0, 0, 0.15);
 		overflow: hidden;
@@ -2818,7 +2871,6 @@ input, select, textarea {
 			}
 
 		.poptrox-popup .caption {
-			background: #fff;
 			bottom: 0;
 			cursor: default;
 			font-size: 0.9em;
