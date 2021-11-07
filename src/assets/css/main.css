@@ -12,6 +12,21 @@
 	--input-background: #f7f7f7;
 }
 
+/* CSS to avoid the js transition */
+@media (prefers-color-scheme: dark) {
+	body:not(.light) {
+		--overlay: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgb(22 27 52 / 80%));
+		--header-image: url("../../images/griffintown-boosted.jpg");
+		--color-background: #2e3141;
+		--color-light: rgba(255, 255, 255, 0.125);
+		--color-highlight: #fff;
+		--input-border: rgba(255, 255, 255, 0.125);
+		--input-background: rgba(255, 255, 255, 0.025);
+		--disabled-background: rgba(255, 255, 255, 0.125) !important;
+		--disabled-border	: rgba(255, 255, 255, 0.025) !important;
+	}
+}
+
 body.dark {
 	--overlay: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgb(22 27 52 / 80%));
 	--header-image: url("../../images/griffintown-boosted.jpg");

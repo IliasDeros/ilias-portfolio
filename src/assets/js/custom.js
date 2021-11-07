@@ -48,15 +48,23 @@
 
     function enableDark() {
       document.body.classList.add('dark')
+      document.body.classList.remove('light')
     }
 
     function disableDark() {
+      document.body.classList.add('light')
       document.body.classList.remove('dark')
     }
 
-    btn.addEventListener('click', function() {
-      document.body.classList.toggle('dark');  
-    })
+    function toggleDark() {
+      if (document.body.classList.contains('dark')) {
+        disableDark();
+      } else {
+        enableDark();
+      }
+    }
+
+    btn.addEventListener('click', toggleDark)
 
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       enableDark()
