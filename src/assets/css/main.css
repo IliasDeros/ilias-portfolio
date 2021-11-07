@@ -16,6 +16,7 @@ body.dark {
 	--overlay: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgb(22 27 52 / 80%));
 	--header-image: url("../../images/griffintown-boosted.jpg");
 	--color-background: #2e3141;
+	--color-light: rgba(255, 255, 255, 0.125);
 	--color-highlight: #fff;
 	--input-border: rgba(255, 255, 255, 0.125);
 	--input-background: rgba(255, 255, 255, 0.025);
