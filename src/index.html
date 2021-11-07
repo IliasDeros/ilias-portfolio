@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
 	</head>
 	<body class="is-preload">
 
@@ -101,13 +102,13 @@
 										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
 										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
 									</div>
-									<ul class="actions">
+
+									<ul class="actions actions--contact">
 										<li><input id="js-contact-submit" type="submit" value="Send Message" /></li>
-										<span class="js-contact-success contact--result">Success !</span>
-										<span class="js-contact-error contact--result__text result--error">Error communicating with server.</span>
+										<div class="js-contact-success actions__result actions__result--success">Thanks for reaching out!</div>
+										<div class="js-contact-error actions__result actions__result--error">Error communicating with server.</div>
 									</ul>
 								</form>
-
 							</div>
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">

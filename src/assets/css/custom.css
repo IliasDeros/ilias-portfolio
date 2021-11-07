@@ -1,0 +1,24 @@
+.actions--contact {
+  margin-top: 2em;
+  margin-bottom: 0;
+}
+
+.actions__result {
+  line-height: 2.75em;
+  padding: 0 1.5em;
+}
+
+.actions__result--error {
+  color: #d50b0b;
+}
+
+.actions__result--success {
+  color: #48d92e;
+}
+
+@media screen and (max-width: 480px) {
+  ul.actions:not(.fixed) {
+    text-align: center;
+    flex-direction: column-reverse;
+  }
+}
